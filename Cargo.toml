@@ -1,0 +1,21 @@
+[package]
+name = "shred-com"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+env_logger = "~0.11"
+log = "0.4"
+dotenv = "~0.15"
+futures-util = "0.3.31"
+solana-client = "2.3.5"
+tokio = { version = "~1.45", features = ["macros", "rt", "rt-multi-thread", "net"] }
+
+chrono = "~0.4"
+tonic = { version = "~0.10", features = ["tls", "tls-roots"] }
+
+# tonic dependencies
+hyper = { version = "~0.14", features = ["client", "http1", "http2"] }
+tower = "~0.4"
+
+reqwest = { version = "~0.11", features = ["blocking", "json", "rustls-tls"] }
